@@ -5,21 +5,20 @@ class ConsoleGenerico{
 	public:
 		void iniciarJogo();
 		void finalizarJogo();
-		string getVersao();
+		string getVersaoFirmware();
 		string getMarca();
+		string getNomeDoProcessador();
 		string getNomeDoJogo();
-	private:
-		int btnCima;
-		int btnBaixo;
-		int btnDireita;
-		int btnEsquerda;
-		int btnA;
-		int btnB;
-		string versao;
-		string marca;
-		string processador;
-		string memoria;
-		string nomeDojogo;
+		void pause();
+		void desligaConsole();
 		
+	private:
+	
+		string versaoFirmware;
+		string marcaConsole;
+		string nomeProcessador;
+		string nomeDojogo;
+		boolean pauseState;
+		boolean desligar;
 		
 };
