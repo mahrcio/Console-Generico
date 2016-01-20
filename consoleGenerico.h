@@ -1,12 +1,13 @@
 #include <string.h>
 using namespace std;
 
-class Consolegenerico{
+class ConsoleGenerico{
 	public:
 		void iniciarJogo();
 		void finalizarJogo();
-		void getVersao();
-		void getMarca();
+		string getVersao();
+		string getMarca();
+		string getNomeDoJogo();
 	private:
 		int btnCima;
 		int btnBaixo;
@@ -16,6 +17,9 @@ class Consolegenerico{
 		int btnB;
 		string versao;
 		string marca;
+		string processador;
+		string memoria;
+		string nomeDojogo;
 		
 		
 };
