@@ -1,5 +1,5 @@
 #include <consoleGenerico.h>
-#include <string.h>
+#include <string>
 using namespace std;
 
 void ConsoleGenerico::iniciarJogo(){
