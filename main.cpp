@@ -1,7 +1,15 @@
 #include <iostream>
+using std::cout;
+#include "ConsoleGenerico.h"
+#include <string>
+using std::string;
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+int main()
+{
+ConsoleGenerico videogame("Sony");
 
-int main() {
-	return 0;
+videogame.ligar();
+videogame.mostraMarca();
+
+
 }
