@@ -11,5 +11,8 @@ ConsoleGenerico videogame("Sony");
 videogame.ligar();
 videogame.mostraMarca();
 
+ConsoleGenerico videogame2(videogame);
+
+videogame2.mostraMarca();
 
 }

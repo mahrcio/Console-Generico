@@ -21,6 +21,15 @@ ConsoleGenerico::ConsoleGenerico(string marca)
     
 }
 
+ConsoleGenerico::ConsoleGenerico(const ConsoleGenerico &console)
+{
+ligado=console.ligado;
+marca=console.marca;
+volume=console.volume;
+ 
+   
+}
+
 ConsoleGenerico::~ConsoleGenerico()
 {
 }
@@ -50,5 +59,5 @@ void ConsoleGenerico::ligar()
 
 void ConsoleGenerico::mostraMarca()
 {
-    cout << marca;
+    cout << marca <<"\n";
 }
