@@ -4,7 +4,7 @@ using std::string;
 #include <iostream>
 using std::cout;
 
-
+int ConsoleGenerico::numeroDeSerie=20150203;
 
 ConsoleGenerico::ConsoleGenerico()
 {

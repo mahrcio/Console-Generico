@@ -10,6 +10,7 @@ private:
     bool ligado;
     string marca;
     int volume; 
+    static int numeroDeSerie;
     
  
 public:
