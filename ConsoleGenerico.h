@@ -15,6 +15,7 @@ private:
 public:
     ConsoleGenerico();
     ConsoleGenerico(string marca);
+    ConsoleGenerico(const &ConsoleGenerico);
     ~ConsoleGenerico();
     void upVolume(int up);
     void downVolume(int down);
