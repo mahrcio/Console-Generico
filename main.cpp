@@ -1,17 +1,17 @@
 #include <iostream>
 using std::cout;
-#include "ConsoleGenerico.h"
+#include "Console.h"
 #include <string>
 using std::string;
 
 int main()
 {
-ConsoleGenerico videogame("Sony");
+Console videogame("Sony");
 
 videogame.ligar();
 videogame.mostraMarca();
 
-ConsoleGenerico videogame2(videogame);
+Console videogame2(videogame);
 
 videogame2.mostraMarca();
 

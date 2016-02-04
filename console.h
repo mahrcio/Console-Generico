@@ -1,9 +1,9 @@
-#ifndef CONSOLEGENERICO_H
-#define CONSOLEGENERICO_H
+#ifndef CONSOLE_H
+#define CONSOLE_H
 #include <string>
 using std::string;
 
-class ConsoleGenerico
+class Console
 {
 private:
 
@@ -14,10 +14,10 @@ private:
     
  
 public:
-    ConsoleGenerico();
-    ConsoleGenerico(string marca);
-    ConsoleGenerico(const ConsoleGenerico &console);
-    ~ConsoleGenerico();
+    Console();
+    Console(string marca);
+    Console(const Console &console);
+    ~Console();
     void upVolume(int up);
     void downVolume(int down);
     void ligar();
@@ -25,4 +25,4 @@ public:
 
 };
 
-#endif // CONSOLEGENERICO_H
+#endif // CONSOLE_H

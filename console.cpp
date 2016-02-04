@@ -1,19 +1,19 @@
-#include "ConsoleGenerico.h"
+#include "Console.h"
 #include <string>
 using std::string;
 #include <iostream>
 using std::cout;
 
-int ConsoleGenerico::numeroDeSerie=20150203;
+int Console::numeroDeSerie=20150203;
 
-ConsoleGenerico::ConsoleGenerico()
+Console::Console()
 {
     ligado=false;
     marca='Desconhecida';
     volume=20;
 }
 
-ConsoleGenerico::ConsoleGenerico(string marca)
+Console::Console(string marca)
 {
     ligado=false;
     this->marca=marca;
@@ -21,7 +21,7 @@ ConsoleGenerico::ConsoleGenerico(string marca)
     
 }
 
-ConsoleGenerico::ConsoleGenerico(const ConsoleGenerico &console)
+Console::Console(const Console &console)
 {
 ligado=console.ligado;
 marca=console.marca;
@@ -30,23 +30,23 @@ volume=console.volume;
    
 }
 
-ConsoleGenerico::~ConsoleGenerico()
+Console::~Console()
 {
 }
 
 
-void ConsoleGenerico::upVolume(int up)
+void Console::upVolume(int up)
 {
     volume=volume+up;
 }
     
-void ConsoleGenerico::downVolume(int down)
+void Console::downVolume(int down)
 {
     volume=volume+down;
 }
 
 
-void ConsoleGenerico::ligar()
+void Console::ligar()
 {
     if ( !ligado )
     {
@@ -57,7 +57,7 @@ void ConsoleGenerico::ligar()
         cout << "Console esta ligado" << '\n';    
 }
 
-void ConsoleGenerico::mostraMarca()
+void Console::mostraMarca()
 {
     cout << marca <<"\n";
 }
