@@ -6,6 +6,8 @@ class joystick
 public:
     joystick();
     ~joystick();
+private:
+    
 
 };
 
