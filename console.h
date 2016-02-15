@@ -10,8 +10,10 @@ private:
     bool ligado;
     string marca;
     int volume; 
-    static int numeroDeSerie;
+    //static int numeroDeSerie;
     bool bandejaAberta;
+    
+    static const double VOLUMEMAXIMO=100;
  
 public:
     Console();

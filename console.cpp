@@ -4,7 +4,7 @@ using std::string;
 #include <iostream>
 using std::cout;
 
-int Console::numeroDeSerie=20150203;
+static int Console::numeroDeSerie=20150203;
 
 Console::Console()
 {
