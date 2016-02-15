@@ -23,6 +23,7 @@ public:
     void ligar();
     void mostraMarca();
     void abrirBandeja();
+    void fecharBandeja();
 
 };
 

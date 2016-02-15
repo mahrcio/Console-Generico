@@ -16,5 +16,7 @@ Console videogame2(videogame);
 videogame2.mostraMarca();
 videogame.abrirBandeja();
 videogame2.abrirBandeja();
+videogame.fecharBandeja();
+videogame2.fecharBandeja();
 
 }

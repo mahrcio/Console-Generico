@@ -76,3 +76,16 @@ if (bandejaAberta)
     }
     
 }
+
+void Console::fecharBandeja(){
+if (bandejaAberta)
+    {
+    bandejaAberta=false;
+    cout << "\nBandeja foi fechada";
+    }
+    else
+    {
+    cout << "\nBandeja ja esta fechada";
+    }
+    
+}
