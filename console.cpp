@@ -11,6 +11,7 @@ Console::Console()
     ligado=false;
     marca='Desconhecida';
     volume=20;
+    bandejaAberta=false;
 }
 
 Console::Console(string marca)
@@ -18,6 +19,7 @@ Console::Console(string marca)
     ligado=false;
     this->marca=marca;
     volume=20;
+    bandejaAberta=false;
     
 }
 
@@ -26,7 +28,8 @@ Console::Console(const Console &console)
 ligado=console.ligado;
 marca=console.marca;
 volume=console.volume;
- 
+bandejaAberta=console.bandejaAberta;
+
    
 }
 
@@ -60,4 +63,16 @@ void Console::ligar()
 void Console::mostraMarca()
 {
     cout << marca <<"\n";
+}
+
+
+void Console::abrirBandeja(){
+if (bandejaAberta)
+    cout << "\nBandeja ja esta aberta";
+    else
+    {
+    bandejaAberta=true;
+    cout << "\nBandeja foi aberta";
+    }
+    
 }

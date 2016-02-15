@@ -11,7 +11,7 @@ private:
     string marca;
     int volume; 
     static int numeroDeSerie;
-    
+    bool bandejaAberta;
  
 public:
     Console();
@@ -22,6 +22,7 @@ public:
     void downVolume(int down);
     void ligar();
     void mostraMarca();
+    void abrirBandeja();
 
 };
 
