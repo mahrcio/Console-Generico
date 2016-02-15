@@ -1,6 +1,6 @@
 #include <iostream>
 using std::cout;
-#include "Console.h"
+#include "console.h"
 #include <string>
 using std::string;
 

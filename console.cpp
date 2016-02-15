@@ -1,4 +1,4 @@
-#include "Console.h"
+#include "console.h"
 #include <string>
 using std::string;
 #include <iostream>
