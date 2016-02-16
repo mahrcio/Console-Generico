@@ -4,8 +4,8 @@ using std::string;
 #include <iostream>
 using std::cout;
 
-static int Console::numeroDeSerie=20150203;
-
+int Console::numeroDeSerie=20150203;
+//
 Console::Console()
 {
     ligado=false;
@@ -13,7 +13,6 @@ Console::Console()
     volume=20;
     bandejaAberta=false;
 }
-
 Console::Console(string marca)
 {
     ligado=false;
@@ -29,25 +28,20 @@ ligado=console.ligado;
 marca=console.marca;
 volume=console.volume;
 bandejaAberta=console.bandejaAberta;
-
-   
 }
 
 Console::~Console()
 {
 }
 
-
 void Console::upVolume(int up)
 {
     volume=volume+up;
 }
-    
 void Console::downVolume(int down)
 {
     volume=volume+down;
 }
-
 
 void Console::ligar()
 {
@@ -65,7 +59,6 @@ void Console::mostraMarca()
     cout << marca <<"\n";
 }
 
-
 void Console::abrirBandeja(){
 if (bandejaAberta)
     cout << "\nBandeja ja esta aberta";
@@ -74,7 +67,6 @@ if (bandejaAberta)
     bandejaAberta=true;
     cout << "\nBandeja foi aberta";
     }
-    
 }
 
 void Console::fecharBandeja(){
@@ -86,6 +78,5 @@ if (bandejaAberta)
     else
     {
     cout << "\nBandeja ja esta fechada";
-    }
-    
+    }  
 }

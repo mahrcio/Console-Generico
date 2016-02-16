@@ -2,20 +2,17 @@
 #define CONSOLE_H
 #include <string>
 using std::string;
-
 class Console
 {
 private:
-
     bool ligado;
     string marca;
     int volume; 
-    //static int numeroDeSerie;
     bool bandejaAberta;
-    
+    //variaveis estiticas
+    static int numeroDeSerie;
     static const double VOLUMEMAXIMO=100;
- 
-public:
+ public:
     Console();
     Console(string marca);
     Console(const Console &console);
@@ -26,7 +23,5 @@ public:
     void mostraMarca();
     void abrirBandeja();
     void fecharBandeja();
-
 };
-
 #endif // CONSOLE_H
