@@ -6,7 +6,10 @@ class Data
 public:
     Data();
     ~Data();
-
+private:
+    int dia;
+    int mes;
+    int ano;
 };
 
 #endif // DATA_H
