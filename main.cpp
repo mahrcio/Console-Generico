@@ -1,6 +1,7 @@
 #include <iostream>
 using std::cout;
 #include "console.h"
+#include "Data.h"
 #include <string>
 using std::string;
 
@@ -18,5 +19,7 @@ videogame.abrirBandeja();
 videogame2.abrirBandeja();
 videogame.fecharBandeja();
 videogame2.fecharBandeja();
+Data dt(2,3,4);
+dt.mostraData();
 
 }
