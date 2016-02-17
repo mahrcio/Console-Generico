@@ -5,6 +5,7 @@ using std::string;
 using std::cout;
 
 int Console::numeroDeSerie=20150203;
+int Console::versaoFirmware=2;
 //
 Console::Console()
 {
@@ -79,4 +80,16 @@ if (bandejaAberta)
     {
     cout << "\nBandeja ja esta fechada";
     }  
+}
+
+
+
+void Console::atualizarFirmware(int novaVersao)
+{
+ versaoFirmware=novaVersao;   
+}
+
+void Console::mostraVersaoFirmware()
+{
+ cout<<"\nVERSAO FIRMWARE.: "<< versaoFirmware;
 }

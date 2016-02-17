@@ -22,4 +22,7 @@ videogame2.fecharBandeja();
 Data dt(2,3,4);
 dt.mostraData();
 
+Console::atualizarFirmware(3);
+Console::mostraVersaoFirmware();
+
 }
