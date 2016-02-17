@@ -20,7 +20,7 @@ if (d<=DIAMAXIMO){
 }
 void Data::mostraData()
 {
-cout<<"\nData= "<<"\nDIA:"<<dia<<"\nMES:"<<mes<<"\nANO:"<<ano;    
+cout<<dia<<"/"<<mes<<"/"<<ano;    
 }
 
 Data::~Data()

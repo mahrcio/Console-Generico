@@ -17,8 +17,10 @@ class Console
     void mostraMarca();
     void abrirBandeja();
     void fecharBandeja();
+    void mostraDataDefabricacao();
     static void atualizarFirmware(int);
     static void mostraVersaoFirmware();
+    
     
 private:
     bool ligado;

@@ -84,6 +84,11 @@ if (bandejaAberta)
     }  
 }
 
+void Console::mostraDataDefabricacao()
+{
+    cout<<"\nD. Fab: ";
+    dataDeFabricacao.mostraData();
+}
 
 
 void Console::atualizarFirmware(int novaVersao)
@@ -93,5 +98,5 @@ void Console::atualizarFirmware(int novaVersao)
 
 void Console::mostraVersaoFirmware()
 {
- cout<<"\nVERSAO FIRMWARE.: "<< versaoFirmware;
+ cout<<"\nVERSAO FIRMWARE:  "<< versaoFirmware;
 }
