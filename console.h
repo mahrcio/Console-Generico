@@ -5,17 +5,7 @@
 using std::string;
 class Console
 {
-private:
-    bool ligado;
-    string marca;
-    int volume; 
-    bool bandejaAberta;
-    Data dataDeFabricacao;
-    //variaveis estiticas
-    static int numeroDeSerie;
-    static int versaoFirmware;
-    static const double VOLUMEMAXIMO=100;
-    
+
  public:
     Console();
     Console(string marca);
@@ -29,5 +19,18 @@ private:
     void fecharBandeja();
     static void atualizarFirmware(int);
     static void mostraVersaoFirmware();
+    
+private:
+    bool ligado;
+    string marca;
+    int volume; 
+    bool bandejaAberta;
+    Data dataDeFabricacao;
+    //variaveis estiticas
+    static int numeroDeSerie;
+    static int versaoFirmware;
+    //const estaticas
+    static const double VOLUMEMAXIMO=100;
+    
 };
 #endif // CONSOLE_H

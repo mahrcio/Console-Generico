@@ -19,8 +19,8 @@ videogame.abrirBandeja();
 videogame2.abrirBandeja();
 videogame.fecharBandeja();
 videogame2.fecharBandeja();
-Data dt(2,3,4);
-dt.mostraData();
+
+videogame.dataDeFabricacao.mostraData();
 
 Console::atualizarFirmware(3);
 Console::mostraVersaoFirmware();

@@ -7,20 +7,21 @@ using std::cout;
 int Console::numeroDeSerie=20150203;
 int Console::versaoFirmware=2;
 //
-Console::Console()
+Console::Console():dataDeFabricacao(17,2,2016)
 {
     ligado=false;
     marca='Desconhecida';
     volume=20;
     bandejaAberta=false;
+    
 }
-Console::Console(string marca)
+Console::Console(string marca):dataDeFabricacao(17,2,2016)
 {
     ligado=false;
     this->marca=marca;
     volume=20;
     bandejaAberta=false;
-    
+        
 }
 
 Console::Console(const Console &console)
@@ -29,6 +30,7 @@ ligado=console.ligado;
 marca=console.marca;
 volume=console.volume;
 bandejaAberta=console.bandejaAberta;
+dataDeFabricacao=console.dataDeFabricacao;
 }
 
 Console::~Console()
