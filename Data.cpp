@@ -1,4 +1,5 @@
 #include "Data.h"
+#include <ctime>
 #include <iostream>
 using std::cout;
 
@@ -27,3 +28,13 @@ Data::~Data()
 {
 }
 
+void Data::gerarData(){
+  
+time_t now = time(0);
+tm *ltm = localtime(&now);
+dia=ltm->tm_mday;
+mes=ltm->tm_mon;
+ano=ltm->tm_year;
+  
+  
+}

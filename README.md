@@ -1,2 +1,2 @@
-# Console Generico
+# Console
 Implemenação de um Console Genérico
