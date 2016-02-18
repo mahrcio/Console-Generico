@@ -13,7 +13,6 @@ Console::Console():dataDeFabricacao(17,2,2016)
     marca='Desconhecida';
     volume=20;
     bandejaAberta=false;
-    
 }
 Console::Console(string marca):dataDeFabricacao(17,2,2016)
 {
@@ -21,7 +20,6 @@ Console::Console(string marca):dataDeFabricacao(17,2,2016)
     this->marca=marca;
     volume=20;
     bandejaAberta=false;
-        
 }
 
 Console::Console(const Console &console)

@@ -5,7 +5,6 @@
 using std::string;
 class Console
 {
-
  public:
     Console();
     Console(string marca);

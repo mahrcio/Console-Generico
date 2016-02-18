@@ -24,5 +24,6 @@ videogame.mostraDataDefabricacao();
 
 Console::atualizarFirmware(3);
 Console::mostraVersaoFirmware();
-
+Data data1(Data::gerarDataAtual());
+data1.mostraData();
 }

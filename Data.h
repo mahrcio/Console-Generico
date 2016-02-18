@@ -7,8 +7,9 @@ public:
     Data();
     ~Data();
     Data(int,int,int);
+    Data(const Data &data);
     void mostraData();
-    void gerarData();
+    static Data gerarDataAtual();
 private:
 static const int DIAMAXIMO=31;
 static const int MESMAXIMO=12;

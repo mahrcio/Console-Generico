@@ -21,20 +21,25 @@ if (d<=DIAMAXIMO){
 }
 void Data::mostraData()
 {
-cout<<dia<<"/"<<mes<<"/"<<ano;    
+cout<<"\n"<<dia<<"/"<<mes<<"/"<<ano;    
 }
-
+Data::Data(const Data &data)
+{
+dia=data.dia;
+mes=data.mes;
+ano=data.ano;
+}
 Data::~Data()
 {
 }
 
-void Data::gerarData(){
-  
+Data Data::gerarDataAtual()
+{
 time_t now = time(0);
 tm *ltm = localtime(&now);
-dia=ltm->tm_mday;
-mes=ltm->tm_mon;
-ano=ltm->tm_year;
-  
-  
+int diaAtual=ltm->tm_mday;
+int mesAtual=ltm->tm_mon;
+int anoAtual=ltm->tm_year+1900;
+Data dataAtual(diaAtual,mesAtual,anoAtual);
+return dataAtual;
 }
