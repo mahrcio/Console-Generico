@@ -14,7 +14,7 @@ Console::Console():dataDeFabricacao(17,2,2016)
     volume=20;
     bandejaAberta=false;
 }
-Console::Console(string marca):dataDeFabricacao(17,2,2016)
+Console::Console(string marca):dataDeFabricacao(Data::gerarDataAtual())
 {
     ligado=false;
     this->marca=marca;
