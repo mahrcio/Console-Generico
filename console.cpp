@@ -7,7 +7,7 @@ using std::cout;
 int Console::numeroDeSerie=20150203;
 int Console::versaoFirmware=2;
 //
-Console::Console():dataDeFabricacao(17,2,2016)
+Console::Console():dataDeFabricacao(Data::gerarDataAtual())
 {
     ligado=false;
     marca='Desconhecida';
