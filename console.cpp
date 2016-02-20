@@ -21,7 +21,6 @@ Console::Console(string marca):dataDeFabricacao(Data::gerarDataAtual())
     volume=20;
     bandejaAberta=false;
 }
-
 Console::Console(const Console &console)
 {
 ligado=console.ligado;
@@ -30,11 +29,9 @@ volume=console.volume;
 bandejaAberta=console.bandejaAberta;
 dataDeFabricacao=console.dataDeFabricacao;
 }
-
 Console::~Console()
 {
 }
-
 void Console::upVolume(int up)
 {
     volume=volume+up;
@@ -43,7 +40,6 @@ void Console::downVolume(int down)
 {
     volume=volume+down;
 }
-
 void Console::ligar()
 {
     if ( !ligado )
@@ -54,12 +50,10 @@ void Console::ligar()
     else
         cout << "Console esta ligado" << '\n';    
 }
-
 void Console::mostraMarca()
 {
     cout << marca <<"\n";
 }
-
 void Console::abrirBandeja(){
 if (bandejaAberta)
     cout << "\nBandeja ja esta aberta";
@@ -69,7 +63,6 @@ if (bandejaAberta)
     cout << "\nBandeja foi aberta";
     }
 }
-
 void Console::fecharBandeja(){
 if (bandejaAberta)
     {
@@ -81,19 +74,15 @@ if (bandejaAberta)
     cout << "\nBandeja ja esta fechada";
     }  
 }
-
 void Console::mostraDataDefabricacao()
 {
     cout<<"\nD. Fab: ";
     dataDeFabricacao.mostraData();
 }
-
-
 void Console::atualizarFirmware(int novaVersao)
 {
  versaoFirmware=novaVersao;   
 }
-
 void Console::mostraVersaoFirmware()
 {
  cout<<"\nVERSAO FIRMWARE:  "<< versaoFirmware;

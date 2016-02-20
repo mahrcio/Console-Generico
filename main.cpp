@@ -1,6 +1,7 @@
 #include <iostream>
 using std::cout;
 #include "console.h"
+#include "MainMenu.h"
 #include "Data.h"
 #include <string>
 using std::string;
@@ -26,4 +27,8 @@ Console::atualizarFirmware(3);
 Console::mostraVersaoFirmware();
 Data data1(Data::gerarDataAtual());
 data1.mostraData();
+
+MainMenu menu;
+menu.menuPrincipal();
+
 }
