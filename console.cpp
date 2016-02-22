@@ -3,6 +3,7 @@
 using std::string;
 #include <iostream>
 using std::cout;
+#include "Game.h"
 
 int Console::numeroDeSerie=20150203;
 int Console::versaoFirmware=2;
@@ -86,4 +87,34 @@ void Console::atualizarFirmware(int novaVersao)
 void Console::mostraVersaoFirmware()
 {
  cout<<"\nVERSAO FIRMWARE:  "<< versaoFirmware;
+}
+
+void Console::addJogoNaMemoria(const Game &novoJogo)
+{
+    
+        if( numJogosNaMemoria != 0 )
+        {
+            Game * aux = new Game[ numJogosNaMemoria ];
+            
+            for(int i = 0; i < numJogosNaMemoria; i++)
+                aux[ i ] = listaDeJogosNaMemoria[ i ];
+            
+            delete [ ] listaDeJogosNaMemoria;
+            
+            listaDeJogosNaMemoria = new Game[ ++numJogosNaMemoria ] ;
+            
+            for(int i = 0; i < numJogosNaMemoria-1; i++)
+                listaDeJogosNaMemoria[ i ] = aux[ i ];
+                
+            listaDeJogosNaMemoria[ numJogosNaMemoria - 1 ] = novoJogo;
+                
+            delete [ ] aux;
+            
+        }
+        else
+        {
+            listaDeJogosNaMemoria = new Game[++numJogosNaMemoria];
+            listaDeJogosNaMemoria[0] = novoJogo;
+        }
+    
 }

@@ -5,6 +5,7 @@ using std::cout;
 #include "Data.h"
 #include <string>
 using std::string;
+#include "Game.h"
 
 int main()
 {
@@ -25,10 +26,14 @@ videogame.mostraDataDefabricacao();
 
 Console::atualizarFirmware(3);
 Console::mostraVersaoFirmware();
-Data data1(Data::gerarDataAtual());
-data1.mostraData();
 
-MainMenu menu;
-menu.menuPrincipal();
+//MainMenu menu;
+//menu.menuPrincipal();
+
+
+Game plants;
+videogame.addJogoNaMemoria(plants);
+
+
 
 }

@@ -1,6 +1,8 @@
 #ifndef CONSOLE_H
 #define CONSOLE_H
 #include "Data.h"
+#include "Game.h"
+#include "Hd.h"
 #include <string>
 using std::string;
 class Console
@@ -19,6 +21,8 @@ class Console
     void mostraDataDefabricacao();
     static void atualizarFirmware(int);
     static void mostraVersaoFirmware();
+    void listarJogosNaMemoria();
+    void addJogoNaMemoria(const Game &novoJogo);
     
     
 private:
@@ -27,6 +31,10 @@ private:
     int volume; 
     bool bandejaAberta;
     Data dataDeFabricacao;
+    Hd hd;
+    Game *listaDeJogosNaMemoria;
+    int numJogosNaMemoria;
+    
     //variaveis estiticas
     static int numeroDeSerie;
     static int versaoFirmware;
