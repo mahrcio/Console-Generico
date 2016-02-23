@@ -1,6 +1,6 @@
 #include <iostream>
 using std::cout;
-#include "console.h"
+#include "Console.h"
 #include "MainMenu.h"
 #include "Data.h"
 #include <string>
