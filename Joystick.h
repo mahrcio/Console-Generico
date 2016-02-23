@@ -1,11 +1,11 @@
 #ifndef JOYSTICK_H
 #define JOYSTICK_H
 
-class joystick
+class Joystick
 {
 public:
-    joystick();
-    ~joystick();
+    Joystick();
+    ~Joystick();
 private:
     
 
