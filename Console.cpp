@@ -14,6 +14,7 @@ Console::Console():dataDeFabricacao(Data::gerarDataAtual())
     marca='Desconhecida';
     volume=20;
     bandejaAberta=false;
+    numJogosNaMemoria=0;
 }
 Console::Console(string marca):dataDeFabricacao(Data::gerarDataAtual())
 {
@@ -21,6 +22,7 @@ Console::Console(string marca):dataDeFabricacao(Data::gerarDataAtual())
     this->marca=marca;
     volume=20;
     bandejaAberta=false;
+    numJogosNaMemoria=0;
 }
 Console::Console(const Console &console)
 {
@@ -29,18 +31,19 @@ marca=console.marca;
 volume=console.volume;
 bandejaAberta=console.bandejaAberta;
 dataDeFabricacao=console.dataDeFabricacao;
+numJogosNaMemoria=console.numJogosNaMemoria;
 }
+//destrutor
 Console::~Console()
 {
 }
+//volume - aumentar e diminuir volume
 void Console::upVolume(int up)
-{
-    volume=volume+up;
-}
+{   volume=volume+up;}
 void Console::downVolume(int down)
-{
-    volume=volume+down;
-}
+{    volume=volume+down;}
+
+//Ligar o Console
 void Console::ligar()
 {
     if ( !ligado )
@@ -51,6 +54,7 @@ void Console::ligar()
     else
         cout << "Console esta ligado" << '\n';    
 }
+
 void Console::mostraMarca()
 {
     cout << marca <<"\n";
@@ -116,5 +120,18 @@ void Console::addJogoNaMemoria(const Game &novoJogo)
             listaDeJogosNaMemoria = new Game[++numJogosNaMemoria];
             listaDeJogosNaMemoria[0] = novoJogo;
         }
+    
+}
+
+void Console::listarJogosNaMemoria( ) 
+{
+    if ( numJogosNaMemoria > 0)
+    {
+        cout << "Os Jogos na Memória sao: \n";
+        for(int i = 0; i < numJogosNaMemoria; i++)
+            cout << listaDeJogosNaMemoria[i].getNome() << "\n";
+    }
+     else
+         cout << "Nenhum Jogo na memória.";
     
 }

@@ -4,24 +4,16 @@ using std::cout;
 #include "MainMenu.h"
 #include "Data.h"
 #include <string>
-using std::string;
+using namespace std;
 #include "Game.h"
 
 int main()
 {
 Console videogame("Sony");
-
 videogame.ligar();
 videogame.mostraMarca();
-
-Console videogame2(videogame);
-
-videogame2.mostraMarca();
 videogame.abrirBandeja();
-videogame2.abrirBandeja();
 videogame.fecharBandeja();
-videogame2.fecharBandeja();
-
 videogame.mostraDataDefabricacao();
 
 Console::atualizarFirmware(3);
@@ -31,9 +23,9 @@ Console::mostraVersaoFirmware();
 //menu.menuPrincipal();
 
 
-Game plants;
+Game plants("Plants");
+cout<<"\nNome do Jogo Criado: "<<plants.getNome()<<"\n"<<endl;
+
 videogame.addJogoNaMemoria(plants);
-
-
-
+videogame.listarJogosNaMemoria();
 }
