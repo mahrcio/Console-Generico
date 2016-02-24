@@ -36,6 +36,7 @@ numJogosNaMemoria=console.numJogosNaMemoria;
 //destrutor
 Console::~Console()
 {
+    delete [] listaDeJogosNaMemoria;
 }
 //volume - aumentar e diminuir volume
 void Console::upVolume(int up)
@@ -134,4 +135,36 @@ void Console::listarJogosNaMemoria( )
      else
          cout << "Nenhum Jogo na memória.";
     
+}
+
+Console Console::operator=(const Console &c)
+{
+    Console *ptr=new Console();
+    ptr->volume=c.volume;
+    ptr->ligado=c.ligado;
+    ptr->marca=c.marca;
+    ptr->bandejaAberta=c.bandejaAberta;
+    ptr->dataDeFabricacao=c.dataDeFabricacao;
+    ptr->listaDeJogosNaMemoria=c.listaDeJogosNaMemoria;
+    ptr->numJogosNaMemoria=c.numJogosNaMemoria;
+    ptr->hd=c.hd;
+    
+    return *ptr;
+}
+
+bool Console::operator==(const Console &c)
+{
+if (volume!=c.volume)
+    return false;
+if (ligado!=c.ligado)
+    return false;
+if (marca!=c.marca)
+    return false;
+if (bandejaAberta!=c.bandejaAberta)
+    return false;
+if (listaDeJogosNaMemoria!=c.listaDeJogosNaMemoria)
+    return false;
+if (numJogosNaMemoria!=c.numJogosNaMemoria)
+    return false;
+return true;
 }
