@@ -1,7 +1,7 @@
 #ifndef PLAYSTATION_H
 #define PLAYSTATION_H
 
-class PlayStation
+class PlayStation: public Console
 {
 public:
     PlayStation();

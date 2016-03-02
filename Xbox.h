@@ -1,7 +1,7 @@
 #ifndef XBOX_H
 #define XBOX_H
 
-class Xbox
+class Xbox: public Console
 {
 public:
     Xbox();
