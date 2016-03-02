@@ -5,11 +5,14 @@ class PlayStation: public Console
 {
 public:
     PlayStation();
+    PlayStation(const PlayStation &p);
+    
     ~PlayStation();
     void conectarPlayStationNetwork();
+    
     PlayStation operator=(const PlayStation &c );
     bool operator==(const PlayStation &c );
-    ostream &operator<<(ostream &os,PlayStation &p);
+    friend ostream &operator<<(ostream &os,PlayStation &p);
 private:
     bool conectadoPlayStationNetwork;
     

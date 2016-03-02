@@ -5,13 +5,16 @@ class Xbox: public Console
 {
 public:
     Xbox();
+    Xbox(const Xbox &x);
+    
     ~Xbox();
     void conectarXboxLive();
     void playMusic();
     void playDVD();
+    
     Xbox operator=(const Xbox &c );
     bool operator==(const Xbox &c );
-    ostream &operator<<(ostream &os,Xbox &x);
+    friend ostream &operator<<(ostream &os,Xbox &x);
     
 private:
     bool conectadoXboxLive;
