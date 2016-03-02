@@ -30,7 +30,7 @@ cout<<"\nNome do Jogo Criado: "<<plants.getNome()<<"\n"<<endl;
 videogame.addJogoNaMemoria(plants);
 videogame.listarJogosNaMemoria();
 
-if (videogame==v2)
+if (videogame==v2);
     cout<<"Iguais";
 
 }

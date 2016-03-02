@@ -9,6 +9,10 @@ public:
     void conectarXboxLive();
     void playMusic();
     void playDVD();
+    Xbox operator=(const Xbox &c );
+    bool operator==(const Xbox &c );
+    ostream &operator<<(ostream &os,Xbox &x);
+    
 private:
     bool conectadoXboxLive;
     bool kinectConectado;
