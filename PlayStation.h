@@ -9,7 +9,7 @@ class PlayStation : public Console
 friend ostream& operator<<(ostream &output, const PlayStation &p);
 public:
     PlayStation();
-    PlayStation(const PlayStation &p);
+    PlayStation(const PlayStation &ps);
     
     ~PlayStation();
     void conectarPlayStationNetwork();

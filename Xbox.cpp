@@ -1,11 +1,19 @@
 #include "Xbox.h"
 #include <iostream>
 using namespace std;
-Xbox::Xbox():Console("Xbox")
+Xbox::Xbox():Console()
 {
+  marca="Xbox";
   conectadoXboxLive=false;  
   kinectConectado=false;
 }
+
+Xbox::Xbox(const Xbox &xb):Console(static_cast<Console>(xb))
+{
+  conectadoXboxLive=xb.conectadoXboxLive;  
+  kinectConectado=xb.kinectConectado;
+}
+
 
 Xbox::~Xbox()
 {

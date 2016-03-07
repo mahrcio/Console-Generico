@@ -8,8 +8,13 @@ PlayStation::PlayStation():Console("PlayStation")
 
 PlayStation::~PlayStation()
 {
+    marca="Sony";
 }
 
+PlayStation::PlayStation(const PlayStation &ps):Console(static_cast<Console>(ps))
+{
+  
+}
 void PlayStation::conectarPlayStationNetwork()
 {
 conectadoPlayStationNetwork=true;

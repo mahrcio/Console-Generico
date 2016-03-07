@@ -31,7 +31,10 @@ videogame.addJogoNaMemoria(plants);
 videogame.listarJogosNaMemoria();
 
 Xbox xb;
-cout<<xb;
+xb.mostraMarca();
+Xbox x2(xb);
+x2.mostraMarca();
+
 
 
 }
