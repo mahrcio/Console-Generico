@@ -16,10 +16,10 @@ Console::Console():dataDeFabricacao(Data::gerarDataAtual())
     bandejaAberta=false;
     numJogosNaMemoria=0;
 }
-Console::Console(string marca):dataDeFabricacao(Data::gerarDataAtual())
+Console::Console(const string m):dataDeFabricacao(Data::gerarDataAtual())
 {
     ligado=false;
-    this->marca=marca;
+    marca=m;
     volume=20;
     bandejaAberta=false;
     numJogosNaMemoria=0;

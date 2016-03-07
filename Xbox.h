@@ -1,8 +1,11 @@
 #ifndef XBOX_H
 #define XBOX_H
-
+#include <iostream>
+using namespace std;
+#include "Console.h"
 class Xbox: public Console
 {
+friend ostream& operator<<(ostream &output, const Xbox &p);
 public:
     Xbox();
     Xbox(const Xbox &x);
@@ -10,12 +13,10 @@ public:
     ~Xbox();
     void conectarXboxLive();
     void playMusic();
-    void playDVD();
     
     Xbox operator=(const Xbox &c );
     bool operator==(const Xbox &c );
-    friend ostream &operator<<(ostream &os,Xbox &x);
-    
+
 private:
     bool conectadoXboxLive;
     bool kinectConectado;

@@ -28,7 +28,7 @@ class Console
     
     
     
-private:
+protected:
     bool ligado;
     string marca;
     int volume; 

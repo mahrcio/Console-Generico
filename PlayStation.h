@@ -1,8 +1,12 @@
 #ifndef PLAYSTATION_H
 #define PLAYSTATION_H
+#include <iostream>
+using namespace std;
+#include "Console.h"
 
-class PlayStation: public Console
+class PlayStation : public Console
 {
+friend ostream& operator<<(ostream &output, const PlayStation &p);
 public:
     PlayStation();
     PlayStation(const PlayStation &p);
@@ -12,7 +16,7 @@ public:
     
     PlayStation operator=(const PlayStation &c );
     bool operator==(const PlayStation &c );
-    friend ostream &operator<<(ostream &os,PlayStation &p);
+    
 private:
     bool conectadoPlayStationNetwork;
     
