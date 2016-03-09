@@ -14,7 +14,7 @@ public:
     ~PlayStation();
     void conectarPlayStationNetwork();
     
-    PlayStation operator=(const PlayStation &c );
+    const PlayStation & operator=(const PlayStation &c );
     bool operator==(const PlayStation &c );
     
 private:

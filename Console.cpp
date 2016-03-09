@@ -137,9 +137,11 @@ void Console::listarJogosNaMemoria( )
     
 }
 
-Console Console::operator=(const Console &c)
+
+
+const Console & Console::operator=(const Console &c)
 {
-    Console *ptr=new Console();
+    Console (*ptr)=new Console();
     ptr->volume=c.volume;
     ptr->ligado=c.ligado;
     ptr->marca=c.marca;
@@ -147,9 +149,8 @@ Console Console::operator=(const Console &c)
     ptr->dataDeFabricacao=c.dataDeFabricacao;
     ptr->listaDeJogosNaMemoria=c.listaDeJogosNaMemoria;
     ptr->numJogosNaMemoria=c.numJogosNaMemoria;
-    ptr->hd=c.hd;
     
-    return *ptr;
+    return *this;
 }
 
 bool Console::operator==(const Console &c)

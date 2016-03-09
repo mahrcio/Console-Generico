@@ -23,7 +23,7 @@ class Console
     static void mostraVersaoFirmware();
     void listarJogosNaMemoria();
     void addJogoNaMemoria(const Game &novoJogo);
-    Console operator=(const Console &c);
+    const Console & operator=(const Console &c);
     bool operator==(const Console &c);
     
     

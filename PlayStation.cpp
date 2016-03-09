@@ -8,13 +8,17 @@ PlayStation::PlayStation():Console("PlayStation")
 
 PlayStation::~PlayStation()
 {
-    marca="Sony";
+    
 }
 
 PlayStation::PlayStation(const PlayStation &ps):Console(static_cast<Console>(ps))
 {
-  
+  conectadoPlayStationNetwork=ps.conectadoPlayStationNetwork;
 }
+
+
+
+
 void PlayStation::conectarPlayStationNetwork()
 {
 conectadoPlayStationNetwork=true;
@@ -28,4 +32,11 @@ ostream& operator<<(ostream &output, const PlayStation &p)
     output << "\n Conectado em PlayStation Network";
    }    
     return output;
+}
+
+const PlayStation & PlayStation::operator=(const PlayStation &p)
+{
+    static_cast <Console&> (*this) = static_cast <Console> (p);
+    conectadoPlayStationNetwork=p.conectadoPlayStationNetwork; 
+    return *this;
 }
