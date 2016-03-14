@@ -23,7 +23,8 @@ conectadoPlayStationNetwork=true;
 ostream &operator<<(ostream &output, const PlayStation &p)
 {
     output <<static_cast< Console > (p)
-    << "\nPS Network?= "<< (p.conectadoPlayStationNetwork? "Conectado":"Desconectado");
+    << "\nPS Network?= "
+    << (p.conectadoPlayStationNetwork? "Conectado":"Desconectado");
     return output;
 }
 

@@ -1,9 +1,8 @@
 #include "Xbox.h"
 #include <iostream>
 using namespace std;
-Xbox::Xbox():Console()
+Xbox::Xbox():Console("Xbox")
 {
-  marca="Xbox";
   conectadoXboxLive=false;  
   kinectConectado=false;
 }
@@ -19,7 +18,10 @@ Xbox::~Xbox()
 {
 }
 
-
+void Xbox::conectarXboxLive()
+{
+conectadoXboxLive=true;
+}
 ostream &operator<<(ostream &output, const Xbox &xbox)
 {
     output <<static_cast< Console > (xbox)
