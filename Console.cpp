@@ -32,16 +32,6 @@ volume=console.volume;
 bandejaAberta=console.bandejaAberta;
 dataDeFabricacao=console.dataDeFabricacao;
 numJogosNaMemoria=0;
-/*numJogosNaMemoria=console.numJogosNaMemoria;
-    if( console.numJogosNaMemoria > 0 )
-        {
-            Game * listaDeJogosNaMemoria = new Game[ console.numJogosNaMemoria ];
-            
-            for(int i = 0; i < console.numJogosNaMemoria; i++)
-                {
-            listaDeJogosNaMemoria[ i ] = console.listaDeJogosNaMemoria[ i ];
-                }
-        }*/
 }
 //destrutor
 Console::~Console()
@@ -132,7 +122,6 @@ void Console::addJogoNaMemoria(const Game &novoJogo)
             listaDeJogosNaMemoria = new Game[++numJogosNaMemoria];
             listaDeJogosNaMemoria[0] = novoJogo;
         }
-    
 }
 
 void Console::listarJogosNaMemoria( ) 
@@ -145,22 +134,26 @@ void Console::listarJogosNaMemoria( )
     }
      else
          cout << "Nenhum Jogo na memória.";
-    
 }
 
 
 
 const Console & Console::operator=(const Console &c)
 {
-    Console (*ptr)=new Console();
-    ptr->volume=c.volume;
-    ptr->ligado=c.ligado;
-    ptr->marca=c.marca;
-    ptr->bandejaAberta=c.bandejaAberta;
-    ptr->dataDeFabricacao=c.dataDeFabricacao;
-    ptr->listaDeJogosNaMemoria=c.listaDeJogosNaMemoria;
-    ptr->numJogosNaMemoria=c.numJogosNaMemoria;
-    
+  
+    volume=c.volume;
+    ligado=c.ligado;
+    marca="c.marca";
+    bandejaAberta=c.bandejaAberta;
+    dataDeFabricacao=c.dataDeFabricacao;
+    listaDeJogosNaMemoria=c.listaDeJogosNaMemoria;
+    for (int i=0;i<c.numJogosNaMemoria;i++)
+    {
+    if( c.numJogosNaMemoria > 0 )
+        {
+            (*this).addJogoNaMemoria(c.listaDeJogosNaMemoria[i]);
+        }
+    }
     return *this;
 }
 
@@ -174,10 +167,6 @@ if (marca!=c.marca)
     return false;
 if (bandejaAberta!=c.bandejaAberta)
     return false;
-/*if (listaDeJogosNaMemoria!=c.listaDeJogosNaMemoria)
-    return false;
-if (numJogosNaMemoria!=c.numJogosNaMemoria)
-    return false;*/
 return true;
 }
 

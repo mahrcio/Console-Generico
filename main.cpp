@@ -27,8 +27,7 @@ Console vd(videogame2);
 if (videogame2==vd)
     cout<<"OK";
     
-
-
-
-
+Console gr;
+gr=videogame2;
+cout<<gr;
 }
