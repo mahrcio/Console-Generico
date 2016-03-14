@@ -24,15 +24,13 @@ void PlayStation::conectarPlayStationNetwork()
 conectadoPlayStationNetwork=true;
 }
 
-ostream& operator<<(ostream &output, const PlayStation &p)
+ostream &operator<<(ostream &output, const PlayStation &p)
 {
-    output << "\n Marca: " << 	p.marca;
-   if (p.conectadoPlayStationNetwork) 
-   {
-    output << "\n Conectado em PlayStation Network";
-   }    
+    output <<static_cast< Console > (p)
+    << "\nPS Network?= "<< (p.conectadoPlayStationNetwork? "Conectado":"Desconectado");
     return output;
 }
+
 
 const PlayStation & PlayStation::operator=(const PlayStation &p)
 {

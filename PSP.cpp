@@ -13,13 +13,7 @@ Psp::~Psp()
 {
 }
 
-/*
-ostream& operator<<(ostream &output, const Psp &p)
-{
-    output << "\n Dens. Pixel: " << 	p.densidade_pixel;
-    return output;
-}
-*/
+
 const Psp & Psp::operator=(const Psp &p)
 {
     static_cast <PlayStation&> (*this) = static_cast <PlayStation> (p);
@@ -31,7 +25,7 @@ const Psp & Psp::operator=(const Psp &p)
 ostream &operator<<(ostream &output, const Psp &p)
 {
     output << static_cast< PlayStation > (p)
-    << "\n>> Dens. Pixel = " << p.densidade_pixel;
+    << "\nDens. Pixel = " << p.densidade_pixel;
     
     return output;
 }

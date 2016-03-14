@@ -19,12 +19,10 @@ Xbox::~Xbox()
 {
 }
 
-ostream& operator<<(ostream &output, const Xbox &p)
+
+ostream &operator<<(ostream &output, const Xbox &xbox)
 {
-    output << "\n Marca: " << 	p.marca;
-   if (p.conectadoXboxLive) 
-   {
-    output << "\n Conectado em XboxLive";
-   }    
+    output <<static_cast< Console > (xbox)
+    << "\nXboxLive?= "<< (xbox.conectadoXboxLive? "Conectado":"Desconectado");
     return output;
 }

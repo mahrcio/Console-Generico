@@ -1,39 +1,33 @@
 #include <iostream>
 #include "Console.h"
-#include "MainMenu.h"
 #include "Data.h"
 #include <string>
 using namespace std;
 #include "Game.h"
 #include "Xbox.h"
+#include "PSP.h"
 
 int main()
 {
-Console videogame;
-videogame.ligar();
-videogame.mostraMarca();
-videogame.abrirBandeja();
-videogame.fecharBandeja();
-videogame.mostraDataDefabricacao();
-//Console v2(videogame);
+Console videogame2,m2;
+videogame2.ligar();
+videogame2.mostraMarca();
+videogame2.abrirBandeja();
+videogame2.fecharBandeja();
+videogame2.mostraDataDefabricacao();
 
 Console::atualizarFirmware(3);
 Console::mostraVersaoFirmware();
 
-//MainMenu menu;
-//menu.menuPrincipal();
-
-
 Game plants("Plants");
-cout<<"\nNome do Jogo Criado: "<<plants.getNome()<<"\n"<<endl;
+videogame2.addJogoNaMemoria(plants);
+videogame2.listarJogosNaMemoria();
 
-videogame.addJogoNaMemoria(plants);
-videogame.listarJogosNaMemoria();
+Console vd(videogame2);
+if (videogame2==vd)
+    cout<<"OK";
+    
 
-Xbox xb;
-xb.mostraMarca();
-Xbox x2(xb);
-x2.mostraMarca();
 
 
 

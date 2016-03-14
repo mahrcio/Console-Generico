@@ -11,15 +11,15 @@ int Console::versaoFirmware=2;
 Console::Console():dataDeFabricacao(Data::gerarDataAtual())
 {
     ligado=false;
-    marca='Desconhecida';
+    marca="Desconhecida";
     volume=20;
     bandejaAberta=false;
     numJogosNaMemoria=0;
 }
-Console::Console(const string m):dataDeFabricacao(Data::gerarDataAtual())
+Console::Console(const string &marcaConsole):dataDeFabricacao(Data::gerarDataAtual())
 {
     ligado=false;
-    marca=m;
+    marca=marcaConsole;
     volume=20;
     bandejaAberta=false;
     numJogosNaMemoria=0;
@@ -31,11 +31,22 @@ marca=console.marca;
 volume=console.volume;
 bandejaAberta=console.bandejaAberta;
 dataDeFabricacao=console.dataDeFabricacao;
-numJogosNaMemoria=console.numJogosNaMemoria;
+numJogosNaMemoria=0;
+/*numJogosNaMemoria=console.numJogosNaMemoria;
+    if( console.numJogosNaMemoria > 0 )
+        {
+            Game * listaDeJogosNaMemoria = new Game[ console.numJogosNaMemoria ];
+            
+            for(int i = 0; i < console.numJogosNaMemoria; i++)
+                {
+            listaDeJogosNaMemoria[ i ] = console.listaDeJogosNaMemoria[ i ];
+                }
+        }*/
 }
 //destrutor
 Console::~Console()
 {
+    if (numJogosNaMemoria>0)
     delete [] listaDeJogosNaMemoria;
 }
 //volume - aumentar e diminuir volume
@@ -163,9 +174,33 @@ if (marca!=c.marca)
     return false;
 if (bandejaAberta!=c.bandejaAberta)
     return false;
-if (listaDeJogosNaMemoria!=c.listaDeJogosNaMemoria)
+/*if (listaDeJogosNaMemoria!=c.listaDeJogosNaMemoria)
     return false;
 if (numJogosNaMemoria!=c.numJogosNaMemoria)
-    return false;
+    return false;*/
 return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ostream &operator<<(ostream &output, const Console &cons)
+{
+    output << "\n\nConsole:"
+    << "\nLigado = " << (cons.ligado? "Ligado":"Desligado")
+    <<"\nMarca= " <<cons.marca
+    <<"\nNm Jogos na Memoria= "<<cons.numJogosNaMemoria;
+    return output;
 }

@@ -1,7 +1,7 @@
 #include "Data.h"
 #include <ctime>
 #include <iostream>
-using std::cout;
+using namespace std;
 
 Data::Data()
 {
@@ -42,4 +42,10 @@ int mesAtual=ltm->tm_mon;
 int anoAtual=ltm->tm_year+1900;
 Data dataAtual(diaAtual,mesAtual,anoAtual);
 return dataAtual;
+}
+
+ostream &operator<<(ostream &output, const Data &dat)
+{
+    output <<"\nData= "<<dat.dia<<"/"<<dat.mes<<"/"<<dat.ano;    
+    return output;
 }

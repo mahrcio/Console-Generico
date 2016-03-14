@@ -1,9 +1,11 @@
 #ifndef GAME_H
 #define GAME_H
 #include <string>
-using std::string;
+#include <iostream>
+using namespace std;
 class Game
 {
+friend ostream& operator<<(ostream &output, const Game &game);
 public:
     Game(string n);
     Game();

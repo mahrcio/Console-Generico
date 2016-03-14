@@ -1,6 +1,7 @@
 #include "Game.h"
 #include <string>
-using std::string;
+#include <iostream>
+using namespace std;
 
 
 Game::Game()
@@ -17,3 +18,9 @@ Game::Game(string n)
 
 string Game::getNome()
 { return nome;}
+
+ostream &operator<<(ostream &output, const Game &game)
+{
+    output <<"\nNome= "<<game.nome;    
+    return output;
+}

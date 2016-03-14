@@ -2,14 +2,16 @@
 #define CONSOLE_H
 #include "Data.h"
 #include "Game.h"
-#include "Hd.h"
 #include <string>
-using std::string;
+#include <iostream>
+using namespace std;
 class Console
+
 {
+ friend ostream& operator<<(ostream &output, const Console &cons);
  public:
     Console();
-    Console(string marca);
+    Console(const string &marcaConsole);
     Console(const Console &console);
     ~Console();
     void upVolume(int up);
@@ -26,19 +28,16 @@ class Console
     const Console & operator=(const Console &c);
     bool operator==(const Console &c);
     
-    
-    
 protected:
     bool ligado;
     string marca;
     int volume; 
     bool bandejaAberta;
     Data dataDeFabricacao;
-    Hd hd;
     Game *listaDeJogosNaMemoria;
     int numJogosNaMemoria;
     
-    //variaveis estiticas
+    //variaveis estaticas
     static int numeroDeSerie;
     static int versaoFirmware;
     //const estaticas

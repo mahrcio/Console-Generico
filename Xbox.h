@@ -5,7 +5,7 @@ using namespace std;
 #include "Console.h"
 class Xbox: public Console
 {
-friend ostream& operator<<(ostream &output, const Xbox &p);
+friend ostream& operator<<(ostream &output, const Xbox &xbox);
 public:
     Xbox();
     Xbox(const Xbox &x);
