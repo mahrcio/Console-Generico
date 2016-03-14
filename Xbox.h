@@ -14,8 +14,9 @@ public:
     void conectarXboxLive();
     void playMusic();
     
-    Xbox operator=(const Xbox &c );
+    const Xbox & operator=(const Xbox &x );
     bool operator==(const Xbox &c );
+    bool operator!=(const Xbox &c);
 
 private:
     bool conectadoXboxLive;

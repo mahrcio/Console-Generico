@@ -10,6 +10,8 @@ public:
     ~Psp();
     
     const Psp & operator=(const Psp &p );
+    bool operator==(const Psp &c );
+    bool operator!=(const Psp &c);
     
     
 private:

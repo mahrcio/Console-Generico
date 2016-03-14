@@ -30,4 +30,16 @@ ostream &operator<<(ostream &output, const Psp &p)
     return output;
 }
 
+bool Psp::operator==(const Psp &c)
+{
+if (static_cast <PlayStation> (*this) != static_cast <PlayStation> (c))
+        return false;
+if (densidade_pixel!=c.densidade_pixel)
+        return false;
+return true;
+}
 
+bool Psp::operator!=(const Psp &c)
+{
+return !(*this==c);
+}

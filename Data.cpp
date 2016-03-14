@@ -19,16 +19,18 @@ if (d<=DIAMAXIMO){
         }
     }
 }
-void Data::mostraData()
-{
-cout<<"\n"<<dia<<"/"<<mes<<"/"<<ano;    
-}
+
 Data::Data(const Data &data)
 {
 dia=data.dia;
 mes=data.mes;
 ano=data.ano;
 }
+void Data::mostraData()
+{
+cout<<"\n"<<dia<<"/"<<mes<<"/"<<ano;    
+}
+
 Data::~Data()
 {
 }
@@ -48,4 +50,28 @@ ostream &operator<<(ostream &output, const Data &dat)
 {
     output <<"\nData= "<<dat.dia<<"/"<<dat.mes<<"/"<<dat.ano;    
     return output;
+}
+
+bool Data::operator==(const Data &d)
+{
+if (dia!=d.dia)
+        return false;
+if (mes!=d.mes)
+        return false;
+if (ano!=d.ano)
+        return false;
+return true;
+}
+
+const Data & Data::operator=(const Data &d)
+{
+ dia=d.dia;
+ mes=d.mes;
+ ano=d.ano;
+    return *this;
+}
+
+bool Data::operator!=(const Data &c)
+{
+return !(*this==c);
 }

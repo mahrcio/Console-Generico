@@ -16,6 +16,7 @@ public:
     
     const PlayStation & operator=(const PlayStation &c );
     bool operator==(const PlayStation &c );
+    bool operator!=(const PlayStation &c);
     
 private:
     bool conectadoPlayStationNetwork;

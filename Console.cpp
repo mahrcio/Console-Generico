@@ -43,7 +43,7 @@ Console::~Console()
 void Console::upVolume(int up)
 {   volume=volume+up;}
 void Console::downVolume(int down)
-{    volume=volume+down;}
+{    volume=volume-down;}
 
 //Ligar o Console
 void Console::ligar()
@@ -97,26 +97,18 @@ void Console::mostraVersaoFirmware()
 
 void Console::addJogoNaMemoria(const Game &novoJogo)
 {
-    
         if( numJogosNaMemoria != 0 )
         {
             Game * aux = new Game[ numJogosNaMemoria ];
-            
             for(int i = 0; i < numJogosNaMemoria; i++)
                 aux[ i ] = listaDeJogosNaMemoria[ i ];
-            
             delete [ ] listaDeJogosNaMemoria;
-            
             listaDeJogosNaMemoria = new Game[ ++numJogosNaMemoria ] ;
-            
             for(int i = 0; i < numJogosNaMemoria-1; i++)
                 listaDeJogosNaMemoria[ i ] = aux[ i ];
-                
             listaDeJogosNaMemoria[ numJogosNaMemoria - 1 ] = novoJogo;
-                
             delete [ ] aux;
-            
-        }
+            }
         else
         {
             listaDeJogosNaMemoria = new Game[++numJogosNaMemoria];
@@ -136,11 +128,8 @@ void Console::listarJogosNaMemoria( )
          cout << "Nenhum Jogo na memória.";
 }
 
-
-
 const Console & Console::operator=(const Console &c)
 {
-  
     volume=c.volume;
     ligado=c.ligado;
     marca="c.marca";
@@ -171,20 +160,6 @@ return true;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ostream &operator<<(ostream &output, const Console &cons)
 {
     output << "\n\nConsole:"
@@ -193,3 +168,9 @@ ostream &operator<<(ostream &output, const Console &cons)
     <<"\nNm Jogos na Memoria= "<<cons.numJogosNaMemoria;
     return output;
 }
+
+bool Console::operator!=(const Console &c)
+{
+return !(*this==c);
+}
+

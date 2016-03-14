@@ -13,6 +13,9 @@ public:
     Data(const Data &data);
     void mostraData();
     static Data gerarDataAtual();
+    const Data & operator=(const Data &d );
+    bool operator==(const Data &d );
+    bool operator!=(const Data &c);
 private:
 static const int DIAMAXIMO=31;
 static const int MESMAXIMO=12;

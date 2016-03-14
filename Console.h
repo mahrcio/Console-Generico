@@ -27,15 +27,17 @@ class Console
     void addJogoNaMemoria(const Game &novoJogo);
     const Console & operator=(const Console &c);
     bool operator==(const Console &c);
+    bool operator!=(const Console &c);
     
 protected:
     bool ligado;
-    string marca;
-    int volume; 
     bool bandejaAberta;
+    string marca;
+    int volume;
+    int numJogosNaMemoria;
     Data dataDeFabricacao;
     Game *listaDeJogosNaMemoria;
-    int numJogosNaMemoria;
+    
     
     //variaveis estaticas
     static int numeroDeSerie;
