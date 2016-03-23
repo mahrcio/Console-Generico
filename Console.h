@@ -4,8 +4,9 @@
 #include "Game.h"
 #include <string>
 #include <iostream>
+#include "Device.h"
 using namespace std;
-class Console
+class Console: public Device
 
 {
  friend ostream& operator<<(ostream &output, const Console &cons);
@@ -16,7 +17,7 @@ class Console
     ~Console();
     void upVolume(int up);
     void downVolume(int down);
-    void ligar();
+    virtual void ligar();
     void mostraMarca();
     void abrirBandeja();
     void fecharBandeja();
@@ -30,7 +31,7 @@ class Console
     bool operator!=(const Console &c);
     
 protected:
-    bool ligado;
+   // bool ligado;
     bool bandejaAberta;
     string marca;
     int volume;

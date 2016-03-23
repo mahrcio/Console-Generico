@@ -10,7 +10,7 @@ int Console::versaoFirmware=2;
 //
 Console::Console():dataDeFabricacao(Data::gerarDataAtual())
 {
-    ligado=false;
+    onoff=false;
     marca="Desconhecida";
     volume=20;
     bandejaAberta=false;
@@ -18,7 +18,7 @@ Console::Console():dataDeFabricacao(Data::gerarDataAtual())
 }
 Console::Console(const string &marcaConsole):dataDeFabricacao(Data::gerarDataAtual())
 {
-    ligado=false;
+    onoff=false;
     marca=marcaConsole;
     volume=20;
     bandejaAberta=false;
@@ -26,7 +26,7 @@ Console::Console(const string &marcaConsole):dataDeFabricacao(Data::gerarDataAtu
 }
 Console::Console(const Console &console)
 {
-ligado=console.ligado;
+onoff=console.onoff;
 marca=console.marca;
 volume=console.volume;
 bandejaAberta=console.bandejaAberta;
@@ -48,9 +48,9 @@ void Console::downVolume(int down)
 //Ligar o Console
 void Console::ligar()
 {
-    if ( !ligado )
+    if ( !onoff )
     {
-        ligado = true;
+        onoff = true;
         cout << "O Console foi ligado\n";
     }
     else
@@ -131,7 +131,7 @@ void Console::listarJogosNaMemoria( )
 const Console & Console::operator=(const Console &c)
 {
     volume=c.volume;
-    ligado=c.ligado;
+    onoff=c.onoff;
     marca="c.marca";
     bandejaAberta=c.bandejaAberta;
     dataDeFabricacao=c.dataDeFabricacao;
@@ -150,7 +150,7 @@ bool Console::operator==(const Console &c)
 {
 if (volume!=c.volume)
     return false;
-if (ligado!=c.ligado)
+if (onoff!=c.onoff)
     return false;
 if (marca!=c.marca)
     return false;
@@ -163,7 +163,7 @@ return true;
 ostream &operator<<(ostream &output, const Console &cons)
 {
     output << "\n\nConsole:"
-    << "\nLigado = " << (cons.ligado? "Ligado":"Desligado")
+    << "\nLigado = " << (cons.onoff? "Ligado":"Desligado")
     <<"\nMarca= " <<cons.marca
     <<"\nNm Jogos na Memoria= "<<cons.numJogosNaMemoria;
     return output;
