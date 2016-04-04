@@ -8,6 +8,7 @@ using namespace std;
 #include "PSP.h"
 # include <vector>
 
+
 int main()
 {
 vector<Console*> videogames;

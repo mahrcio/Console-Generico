@@ -44,6 +44,7 @@ const Xbox & Xbox::operator=(const Xbox &x)
     return *this;
 }
 
+
 bool Xbox::operator!=(const Xbox &c)
 {
 return !(*this==c);

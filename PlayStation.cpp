@@ -47,6 +47,7 @@ return !(*this==c);
 }
 
 
+
 void PlayStation::ligar()
 {
 if (ligadoNaTomada) {

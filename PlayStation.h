@@ -23,4 +23,5 @@ protected:
     bool ligadoNaTomada;
 };
 
+
 #endif // PLAYSTATION_H

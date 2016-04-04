@@ -30,6 +30,7 @@ class Console: public Device
     bool operator==(const Console &c);
     bool operator!=(const Console &c);
     
+    
 protected:
    // bool ligado;
     bool bandejaAberta;

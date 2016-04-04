@@ -71,6 +71,7 @@ if (bandejaAberta)
     cout << "\nBandeja ja esta fechada";
     }  
 }
+
 void Console::mostraDataDefabricacao()
 {
     cout<<"\nD. Fab: ";

@@ -9,6 +9,7 @@ Game::Game()
     nome="Novo Game";
 }
 
+
 Game::Game(string n)
 {
     nome=n;

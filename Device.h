@@ -12,4 +12,5 @@ bool onoff;
 
 };
 
+
 #endif // DEVICE_H

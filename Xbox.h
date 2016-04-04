@@ -24,4 +24,5 @@ protected:
     bool ligadoNaTomada;
 };
 
+
 #endif // XBOX_H
