@@ -13,14 +13,14 @@ public:
     
     ~PlayStation();
     void conectarPlayStationNetwork();
-    
+    virtual void ligar();
     const PlayStation & operator=(const PlayStation &c );
     bool operator==(const PlayStation &c );
     bool operator!=(const PlayStation &c);
     
-private:
+protected:
     bool conectadoPlayStationNetwork;
-    
+    bool ligadoNaTomada;
 };
 
 #endif // PLAYSTATION_H

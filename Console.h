@@ -17,7 +17,7 @@ class Console: public Device
     ~Console();
     void upVolume(int up);
     void downVolume(int down);
-    virtual void ligar();
+    virtual void ligar()=0;
     void mostraMarca();
     void abrirBandeja();
     void fecharBandeja();

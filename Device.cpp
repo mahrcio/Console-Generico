@@ -2,6 +2,7 @@
 
 Device::Device()
 {
+    onoff=false;
 }
 
 Device::~Device()

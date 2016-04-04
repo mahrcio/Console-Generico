@@ -8,14 +8,15 @@ public:
     Psp();
     Psp(const Psp &p);
     ~Psp();
-    
+    virtual void ligar();
     const Psp & operator=(const Psp &p );
     bool operator==(const Psp &c );
     bool operator!=(const Psp &c);
     
     
-private:
+protected:
     int densidade_pixel;
+    int nivelBateria;
 };
 
 #endif // PSP_H

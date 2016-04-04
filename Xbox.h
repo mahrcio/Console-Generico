@@ -13,14 +13,15 @@ public:
     ~Xbox();
     void conectarXboxLive();
     void playMusic();
-    
+    virtual void ligar();
     const Xbox & operator=(const Xbox &x );
     bool operator==(const Xbox &c );
     bool operator!=(const Xbox &c);
 
-private:
+protected:
     bool conectadoXboxLive;
     bool kinectConectado;
+    bool ligadoNaTomada;
 };
 
 #endif // XBOX_H

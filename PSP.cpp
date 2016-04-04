@@ -43,3 +43,17 @@ bool Psp::operator!=(const Psp &c)
 {
 return !(*this==c);
 }
+
+
+void Psp::ligar()
+{
+if (nivelBateria>0) {
+  if ( !onoff )
+    {
+        onoff = true;
+        cout << "O PSP foi ligado\n";
+    }
+    else
+        cout << "PSP esta ligado" << '\n';    
+}
+}

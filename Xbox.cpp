@@ -7,7 +7,7 @@ Xbox::Xbox():Console("Xbox")
   kinectConectado=false;
 }
 
-Xbox::Xbox(const Xbox &xb):Console(static_cast<Console>(xb))
+Xbox::Xbox(const Xbox &xb):Console(xb)
 {
   conectadoXboxLive=xb.conectadoXboxLive;  
   kinectConectado=xb.kinectConectado;
@@ -24,15 +24,12 @@ conectadoXboxLive=true;
 }
 ostream &operator<<(ostream &output, const Xbox &xbox)
 {
-    output <<static_cast< Console > (xbox)
-    << "\nXboxLive?= "<< (xbox.conectadoXboxLive? "Conectado":"Desconectado");
+    output<< "\nXboxLive?= "<< (xbox.conectadoXboxLive? "Conectado":"Desconectado");
     return output;
 }
 //
 bool Xbox::operator==(const Xbox &c)
 {
-if (static_cast <Console> (*this) != static_cast <Console> (c))
-        return false;
 if (conectadoXboxLive!=c.conectadoXboxLive)
         return false;
 if (kinectConectado!=c.kinectConectado)
@@ -42,7 +39,6 @@ return true;
 
 const Xbox & Xbox::operator=(const Xbox &x)
 {
-    static_cast <Console&> (*this) = static_cast <Console> (x);
     conectadoXboxLive=x.conectadoXboxLive;
     kinectConectado=x.kinectConectado;
     return *this;
@@ -51,4 +47,17 @@ const Xbox & Xbox::operator=(const Xbox &x)
 bool Xbox::operator!=(const Xbox &c)
 {
 return !(*this==c);
+}
+
+void Xbox::ligar()
+{
+if (ligadoNaTomada) {
+  if ( !onoff )
+    {
+        onoff = true;
+        cout << "O Xbox foi ligado\n";
+    }
+    else
+        cout << "Xbox esta ligado" << '\n';    
+}
 }

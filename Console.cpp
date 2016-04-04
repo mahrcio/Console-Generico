@@ -45,17 +45,7 @@ void Console::upVolume(int up)
 void Console::downVolume(int down)
 {    volume=volume-down;}
 
-//Ligar o Console
-void Console::ligar()
-{
-    if ( !onoff )
-    {
-        onoff = true;
-        cout << "O Console foi ligado\n";
-    }
-    else
-        cout << "Console esta ligado" << '\n';    
-}
+
 
 void Console::mostraMarca()
 {
