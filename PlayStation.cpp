@@ -1,10 +1,11 @@
 #include "PlayStation.h"
 #include <iostream>
 using namespace std;
-PlayStation::PlayStation():Console("PlayStation")
+PlayStation::PlayStation()
 {
     conectadoPlayStationNetwork=false;
     ligadoNaTomada=false;
+    marca="PlayStation";
 }
 
 PlayStation::~PlayStation()

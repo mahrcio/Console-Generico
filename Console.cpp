@@ -47,7 +47,7 @@ void Console::downVolume(int down)
 
 
 
-void Console::mostraMarca()
+const void Console::mostraMarca()
 {
     cout << marca <<"\n";
 }

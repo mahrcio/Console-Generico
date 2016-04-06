@@ -18,7 +18,7 @@ class Console: public Device
     void upVolume(int up);
     void downVolume(int down);
     virtual void ligar()=0;
-    void mostraMarca();
+    const void mostraMarca();
     void abrirBandeja();
     void fecharBandeja();
     void mostraDataDefabricacao();
